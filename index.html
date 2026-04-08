@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Link Tree</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .container {
+      text-align: center;
+      padding: 40px 20px;
+      max-width: 420px;
+      width: 100%;
+    }
+    .profile-pic {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      margin-bottom: 15px;
+    }
+    h1 { color: #fff; font-size: 1.5rem; margin-bottom: 5px; }
+    p { color: #e0d7f5; margin-bottom: 25px; font-size: 0.95rem; }
+    .link-btn {
+      display: block;
+      background: #fff;
+      color: #333;
+      text-decoration: none;
+      padding: 14px 20px;
+      margin: 10px 0;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .link-btn:hover {
+      transform: scale(1.03);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Replace the image URL with your own profile picture -->
+    <img src="https://via.placeholder.com/100" alt="Profile" class="profile-pic">
+    <h1>Your Name</h1>
+    <p>A short bio or tagline goes here</p>
+
+    <!-- Replace the URLs and labels with your own links -->
+    <a href="https://yourwebsite.com" class="link-btn">🌐 My Website</a>
+    <a href="https://instagram.com/yourhandle" class="link-btn">📸 Instagram</a>
+    <a href="https://twitter.com/yourhandle" class="link-btn">🐦 Twitter / X</a>
+    <a href="https://linkedin.com/in/yourprofile" class="link-btn">💼 LinkedIn</a>
+    <a href="https://youtube.com/yourchannel" class="link-btn">🎥 YouTube</a>
+    <a href="mailto:you@email.com" class="link-btn">✉️ Email Me</a>
+  </div>
+</body>
+</html>
+
