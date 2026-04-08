@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Link Tree</title>
+  <title>Topline Analytics Portfolio</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -13,23 +13,30 @@
       min-height: 100vh;
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
+      padding: 40px 20px;
     }
     .container {
       text-align: center;
-      padding: 40px 20px;
-      max-width: 420px;
+      max-width: 500px;
       width: 100%;
     }
-    .profile-pic {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      border: 3px solid #fff;
-      margin-bottom: 15px;
+    h1 {
+      color: #fff;
+      font-size: 1.6rem;
+      margin-bottom: 30px;
     }
-    h1 { color: #fff; font-size: 1.5rem; margin-bottom: 5px; }
-    p { color: #e0d7f5; margin-bottom: 25px; font-size: 0.95rem; }
+    .section-title {
+      color: #e0d7f5;
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 30px;
+      margin-bottom: 12px;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      padding-bottom: 6px;
+    }
     .link-btn {
       display: block;
       background: #fff;
@@ -50,18 +57,25 @@
 </head>
 <body>
   <div class="container">
-    <!-- Replace the image URL with your own profile picture -->
-    <img src="https://via.placeholder.com/100" alt="Profile" class="profile-pic">
-    <h1>Your Name</h1>
-    <p>A short bio or tagline goes here</p>
+    <h1>Links to Topline Analytics Artifacts</h1>
 
-    <!-- Replace the URLs and labels with your own links -->
-    <a href="https://yourwebsite.com" class="link-btn">🌐 My Website</a>
-    <a href="https://instagram.com/yourhandle" class="link-btn">📸 Instagram</a>
-    <a href="https://twitter.com/yourhandle" class="link-btn">🐦 Twitter / X</a>
-    <a href="https://linkedin.com/in/yourprofile" class="link-btn">💼 LinkedIn</a>
-    <a href="https://youtube.com/yourchannel" class="link-btn">🎥 YouTube</a>
-    <a href="mailto:you@email.com" class="link-btn">✉️ Email Me</a>
+    <!-- Section 1: Topline Portal -->
+    <div class="section-title">Topline Portal</div>
+    <a href="https://topline.amazon.com/" class="link-btn" target="_blank">🌐 Topline Portal</a>
+
+    <!-- Section 2: Topline Dashboards -->
+    <div class="section-title">Topline Dashboards</div>
+    <a href="https://us-west-2b.online.tableau.com/#/site/a2ztabcloud/views/ToplineDemandMonitoring/ForecastAccuracy-Data?:iid=1" class="link-btn" target="_blank">📊 Demand Monitoring Dashboard</a>
+    <a href="https://us-west-2b.online.tableau.com/#/site/a2ztabcloud/views/ToplineForecastReview/ForecastReview-Visuals?:iid=1" class="link-btn" target="_blank">📈 Forecast Review Dashboard</a>
+
+    <!-- Section 3: Topline Reports -->
+    <div class="section-title">Topline Reports</div>
+    <a href="https://share.amazon.com/sites/ToplineBI/Documents/Topline%20Analytics/Automated%20Reports/Forecast%20Packet/HTML%20view%20dashboard/Topline_Centralized_Reports.html#" class="link-btn" target="_blank">📋 TARP</a>
+
+    <!-- Section 4: SharePoint Documents -->
+    <div class="section-title">SharePoint Documents</div>
+    <a href="https://amazon.sharepoint.com/sites/AIMTeam365/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FAIMTeam365%2FShared%20Documents%2FAPAC%2F0%2E%20SROM%20Topline%202026%20OP&viewid=ba0b07c3%2D9a71%2D48b1%2D9d4d%2Da801e8a123d1&csf=1&CID=d506b257%2Daa6e%2D4b84%2D9189%2Da61089bbad0d&FolderCTID=0x012000B0570F092DC2D94397863D62E981DA02" class="link-btn" target="_blank">📁 2026 Topline Doc</a>
+
   </div>
 </body>
 </html>
