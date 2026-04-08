@@ -9,29 +9,49 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f0f2f5;
+      background-color: #0f172a;
+      background-image:
+        linear-gradient(rgba(99, 102, 241, 0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(99, 102, 241, 0.07) 1px, transparent 1px);
+      background-size: 40px 40px;
       min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: flex-start;
-      padding: 40px 20px;
+      padding: 0 20px 40px 20px;
+      position: relative;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 240px;
+      background: linear-gradient(135deg, #1e3a5f 0%, #4f46e5 50%, #7c3aed 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 55%, 0 100%);
+      z-index: 0;
     }
     .container {
       max-width: 520px;
       width: 100%;
+      position: relative;
+      z-index: 1;
+      padding-top: 48px;
     }
     .header {
       text-align: center;
       margin-bottom: 36px;
     }
     .header h1 {
-      color: #1a1a2e;
+      color: #e0e7ff;
       font-size: 1.5rem;
       font-weight: 700;
       margin-bottom: 6px;
     }
     .header p {
-      color: #6b7280;
+      color: #94a3b8;
       font-size: 0.85rem;
       font-weight: 400;
     }
@@ -41,38 +61,42 @@
       margin-bottom: 28px;
     }
     .section-title {
-      color: #6b7280;
+      color: #94a3b8;
       font-size: 0.7rem;
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 1.5px;
       margin-bottom: 10px;
       padding-left: 4px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding-bottom: 6px;
     }
 
     /* Link Card */
     .link-card {
-      background: #fff;
+      background: #1e293b;
       border-radius: 10px;
       margin-bottom: 8px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.2);
       overflow: hidden;
-      transition: box-shadow 0.2s;
+      transition: box-shadow 0.2s, transform 0.2s;
+      border: 1px solid rgba(255,255,255,0.04);
     }
     .link-card:hover {
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 16px rgba(79, 70, 229, 0.2);
+      transform: translateY(-1px);
     }
     .link-card a.link-main {
       display: block;
       padding: 14px 18px;
-      color: #1a1a2e;
+      color: #e2e8f0;
       text-decoration: none;
       font-size: 0.95rem;
       font-weight: 600;
       transition: color 0.2s;
     }
     .link-card a.link-main:hover {
-      color: #4f46e5;
+      color: #818cf8;
     }
 
     /* User Guide - Collapsible */
@@ -82,14 +106,14 @@
     .guide-label {
       display: block;
       padding: 0 18px 12px 18px;
-      color: #9ca3af;
+      color: #64748b;
       font-size: 0.75rem;
       font-weight: 500;
       cursor: pointer;
       transition: color 0.2s;
     }
     .guide-label:hover {
-      color: #4f46e5;
+      color: #818cf8;
     }
     .guide-label::before {
       content: "▸ ";
@@ -107,10 +131,10 @@
     }
     .guide-text {
       padding: 0 18px 14px 18px;
-      color: #6b7280;
+      color: #94a3b8;
       font-size: 0.8rem;
       line-height: 1.5;
-      border-top: 1px solid #f3f4f6;
+      border-top: 1px solid #334155;
       padding-top: 10px;
     }
 
@@ -118,7 +142,7 @@
     .footer {
       text-align: center;
       margin-top: 32px;
-      color: #d1d5db;
+      color: #475569;
       font-size: 0.7rem;
     }
   </style>
@@ -141,7 +165,7 @@
         <label for="guide-portal" class="guide-label">User Guide</label>
         <div class="guide-content">
           <div class="guide-text">
-            The central hub for all Topline Analytics tools. Use it to access dashboards, reports, and documentation in one place.
+            Topline Portal is customer-facing Topline UI that helps customers download the latest forecast, stay updated with upcoming publishes (includes overlays deadlines), topline announcements and contains topline definations.
           </div>
         </div>
       </div>
@@ -168,7 +192,7 @@
         <label for="guide-forecast" class="guide-label">User Guide</label>
         <div class="guide-content">
           <div class="guide-text">
-            The Forecast Review dashboard shows Marketplace/Channel-level growth rates and revisions across key time horizons for the latest (or in review) publish vs the prior and prior guidance publishes. 
+            The Forecast Review dashboard shows Marketplace/Channel-level growth rates and revisions across key time horizons for the latest (or in review) publish vs the prior and prior guidance publishes.
           </div>
         </div>
       </div>
@@ -179,7 +203,7 @@
         <label for="guide-traffic" class="guide-label">User Guide</label>
         <div class="guide-content">
           <div class="guide-text">
-            Traffic & Marketing dashboard provides traffic performance as a contribution to growth bridge for each marketplace/region. 
+            Traffic & Marketing dashboard provides traffic performance as a contribution to growth bridge for each marketplace/region.
           </div>
         </div>
       </div>
@@ -201,7 +225,7 @@
         <label for="guide-speed" class="guide-label">User Guide</label>
         <div class="guide-content">
           <div class="guide-text">
-            GVS dashboard provides visibility to daily trends in Glance View Speed (GVS), including the individual GVS buckets (e.g. <= 2 days) and the avg. GVS.
+            GVS dashboard provides visibility to daily trends in Glance View Speed (GVS), including the individual GVS buckets.
           </div>
         </div>
       </div>
@@ -212,7 +236,7 @@
         <label for="guide-aspbands" class="guide-label">User Guide</label>
         <div class="guide-content">
           <div class="guide-text">
-            ASP Bands Dashboard provides a view of the contribution of each ASP band towards demand growth rate (Ordered GMS and Units). It also show trends of levels and YoY Growth rates for ordered GMS, Units by different segments like channel, GL Product Family, ASP Bands. 
+            ASP Bands Dashboard provides a view of the contribution of each ASP band towards demand growth rate (Ordered GMS and Units). It also show trends of levels and YoY Growth rates for ordered GMS, Units by different segments like channel, GL Product Family, ASP Bands.
           </div>
         </div>
       </div>
@@ -223,7 +247,7 @@
         <label for="guide-aspratemix" class="guide-label">User Guide</label>
         <div class="guide-content">
           <div class="guide-text">
-            ASP rate-mix decomposition dashboard can track how actual rate and mix evolve over time. The rate represents the pass-through of macro spending into Amazon prices. 
+            ASP rate-mix decomposition dashboard can track how actual rate and mix evolve over time. The rate represents the pass-through of macro spending into Amazon prices.
           </div>
         </div>
       </div>
